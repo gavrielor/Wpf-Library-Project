@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClassLibraryLibrary.Models.AbstractItem">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQCAAAAAAAAAAAQAAAAAAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>Models\AbstractItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryLibrary.Models.Book">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAiAIAAAAAAAAAAAAAAAAAQAAAIAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryLibrary.Models.Journal">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAACAIAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Journal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryLibrary.Models.ItemCollection">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAQJAACAgABAAAgBEAgAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ItemCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="items" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibraryLibrary.Library">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAEAAAAACAAAABAIKAAAAAAAAAAoAAAAgRAAAAA=</HashCode>
+      <FileName>Library.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Items" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="discountsList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClassLibraryLibrary.Models.Discount">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAACAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Discount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

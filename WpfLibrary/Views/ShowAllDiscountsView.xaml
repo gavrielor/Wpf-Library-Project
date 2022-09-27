@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WpfLibrary.Views.ShowAllDiscountsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfLibrary.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource Locator}, Path=ShowAllDiscounts}">
+    <StackPanel Width="500">
+        <TextBlock Text="All Discounts:" Style="{StaticResource header}"/>
+        <DataGrid ItemsSource="{Binding AllDiscounts}" SelectedItem="{Binding SelectedDiscount}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="For Type" Binding="{Binding ForType.Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Discount Value(%)" Binding="{Binding DiscountValue}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Property Name" Binding="{Binding PropertyName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Property Value" Binding="{Binding PropertyValue}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Setter Property="Visibility" Value="Visible"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding AllDiscounts.Count}" Value="0">
+                            <Setter Property="Visibility" Value="Hidden" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Style>
+        </DataGrid>
+        <TextBlock Text="There are no active discounts in the library">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource mainStyle}">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding AllDiscounts.Count}" Value="0">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Button Content="Remove Discount" Command="{Binding RemoveDiscountCommand}"/>
+        <Button Content="Back" Command="{Binding BackCommand}"/>
+    </StackPanel>
+</UserControl>
